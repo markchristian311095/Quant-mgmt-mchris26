@@ -1,0 +1,28 @@
+---
+title: "Quant Mgmt Assignment 6"
+author: "Mark Christian"
+date: "10/18/2020"
+output:
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Refer to the LP file
+```{r}
+library(lpSolveAPI)
+x <- read.lp("mchris26.lp")
+```
+
+
+```{r}
+solve(x)
+get.objective(x)
+get.variables(x)
+get.constraints(x)
+get.sensitivity.objex(x)
+get.sensitivity.rhs(x)
+```
